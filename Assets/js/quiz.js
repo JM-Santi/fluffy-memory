@@ -48,8 +48,6 @@ let questions = [
 var qIndex;
 var time;
 var timerId; 
-
-
 function startQuiz() {
     quiz.setAttribute("class", "hide");
     qIndex = 0;
@@ -132,7 +130,6 @@ function showScore() {
     questionsSection.setAttribute("class", "hide");
     totalScore.setAttribute("class", "");
 }
-
 // Show list of scores
 function showScoreList() {
     header.setAttribute("class", "hide");
@@ -140,7 +137,6 @@ function showScoreList() {
     totalScore.setAttribute("class", "hide");
     scoreListSection.setAttribute("class", "");
 }
-
 // Save score
 function save() {
     savedScores.push([initials.value, time]);
@@ -148,7 +144,6 @@ function save() {
     showScores();
     showScoreList();
 }
-
 // show score when saved
 function showScores() {
     list.innerHTML = "";
@@ -157,8 +152,6 @@ function showScores() {
         list.innerHTML += "<li>" + (++i) + ". " + score[0] + " - " + score[1] + "</li>";
     })
 }
-
-
 //returns you to start
 function returnFromSave() {
     header.setAttribute("class", "");
@@ -169,8 +162,6 @@ function returnFromSave() {
     questionsSection.setAttribute("class", "");
     scoreListSection.setAttribute("class", "hide");
 }
-
-
 scoresBtn.onclick = showScoreList;
 submitBtn.onclick = save;
 returnBtn.onclick = returnFromSave;
